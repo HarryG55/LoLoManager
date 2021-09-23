@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageLogController">
+   <children>
+      <ListView fx:id="logListView" layoutX="31.0" layoutY="39.0" prefHeight="276.0" prefWidth="474.0" />
+      <Button fx:id="editLogButton" layoutX="429.0" layoutY="342.0" mnemonicParsing="false" onAction="#editLogButtonAction" text="编辑" />
+      <Button fx:id="deleteLogButton" layoutX="505.0" layoutY="342.0" mnemonicParsing="false" onAction="#deleteLogButtonAction" text="删除" />
+      <Label fx:id="manageLogStateLabel" layoutX="31.0" layoutY="347.0" prefHeight="21.0" prefWidth="115.0" />
+   </children>
+</AnchorPane>

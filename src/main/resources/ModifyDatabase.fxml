@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyDatabaseController">
+   <children>
+      <AnchorPane prefHeight="359.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="64.0" layoutY="31.0" text="数据库名称" />
+            <Label layoutX="64.0" layoutY="103.0" text="数据库地址" />
+            <Label layoutX="64.0" layoutY="138.0" text="数据库端口" />
+            <Label layoutX="82.0" layoutY="212.0" text="用户名" />
+            <Label layoutX="89.0" layoutY="249.0" text="密码" />
+            <TextField fx:id="dbname" layoutX="199.0" layoutY="26.0" />
+            <TextField fx:id="dbaddress" layoutX="199.0" layoutY="98.0" />
+            <TextField fx:id="dbport" layoutX="199.0" layoutY="133.0" />
+            <TextField fx:id="dbuser" layoutX="199.0" layoutY="207.0" />
+            <TextField fx:id="dbpassword" layoutX="199.0" layoutY="244.0" />
+            <Label layoutX="64.0" layoutY="66.0" text="数据库类型" />
+            <ChoiceBox fx:id="dbType" layoutX="199.0" layoutY="61.0" prefHeight="30.0" prefWidth="202.0" />
+            <Label layoutX="89.0" layoutY="286.0" prefHeight="20.0" prefWidth="30.0" text="备注" />
+            <TextField fx:id="dbmemo" layoutX="199.0" layoutY="281.0" />
+            <TextField fx:id="dbschema" layoutX="199.0" layoutY="171.0" />
+            <Text layoutX="79.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="数据库" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="20.0" layoutY="325.0" prefHeight="81.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="CreateConnection" layoutX="518.0" layoutY="26.0" mnemonicParsing="false" onAction="#createNewDatabaseAction" text="新建" />
+            <Label fx:id="state" layoutX="43.0" layoutY="29.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

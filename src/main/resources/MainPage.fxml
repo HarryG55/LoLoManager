@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainPageController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="数据库连接">
+            <items>
+              <MenuItem fx:id="newConnection" mnemonicParsing="false" onAction="#openModifyDatabasePageAction" text="新建连接" />
+                  <MenuItem fx:id="deleteSQLConnection" mnemonicParsing="false" onAction="#openManageDatabasePageAction" text="管理连接" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="本地日志管理">
+            <items>
+              <MenuItem fx:id="newLog" mnemonicParsing="false" onAction="#createLogAction" text="新建日志" />
+                  <MenuItem fx:id="queryLog" mnemonicParsing="false" onAction="#openManageLogAction" text="管理日志" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <TextArea fx:id="actionLog" editable="false" prefHeight="151.0" prefWidth="960.0" promptText="操作日志" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="357.0" prefWidth="576.0" BorderPane.alignment="CENTER">
+         <children>
+            <ChoiceBox fx:id="databaseChoiceBox" layoutX="40.0" layoutY="45.0" prefHeight="30.0" prefWidth="410.0" />
+            <Label layoutX="40.0" layoutY="25.0" prefHeight="20.0" prefWidth="87.0" text="数据库选择" />
+            <Label layoutX="40.0" layoutY="125.0" prefHeight="20.0" prefWidth="109.0" text="日志选择" />
+            <Label layoutX="40.0" layoutY="243.0" text="提交人员" />
+            <Label layoutX="226.0" layoutY="243.0" text="审核人员" />
+            <TextField fx:id="programmer" layoutX="40.0" layoutY="272.0" prefHeight="30.0" prefWidth="127.0" />
+            <TextField fx:id="checker" layoutX="226.0" layoutY="272.0" prefHeight="30.0" prefWidth="126.0" />
+            <ChoiceBox fx:id="logChoiceBox" layoutX="40.0" layoutY="149.0" prefHeight="30.0" prefWidth="407.0" />
+         </children>
+      </AnchorPane>
+   </center>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="insertAction" layoutX="16.0" layoutY="151.0" mnemonicParsing="false" onAction="#insertAction" prefHeight="49.0" prefWidth="174.0" text="插入语句" />
+            <Button fx:id="connectTest" layoutX="15.0" layoutY="86.0" mnemonicParsing="false" onAction="#connectTestOnAction" prefHeight="44.0" prefWidth="175.0" text="数据库连接测试" />
+            <Button fx:id="refreshButton" layoutX="17.0" layoutY="215.0" mnemonicParsing="false" onAction="#init" prefHeight="46.0" prefWidth="172.0" text="刷新" />
+         </children>
+      </AnchorPane>
+   </right>
+   <left>
+      <TextArea fx:id="SQLInput" prefHeight="357.0" prefWidth="265.0" promptText="请输入SQL" BorderPane.alignment="CENTER" />
+   </left>
+</BorderPane>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageDatabaseController">
+   <children>
+      <TableView fx:id="databaseManageTable" layoutX="29.0" layoutY="25.0" prefHeight="492.0" prefWidth="716.0" />
+      <Button fx:id="databaseManageDeleteButton" layoutX="712.0" layoutY="540.0" mnemonicParsing="false" onAction="#deleteDatabaseAction" text="删除" />
+   </children>
+</AnchorPane>

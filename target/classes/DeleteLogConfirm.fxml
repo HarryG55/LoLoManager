@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane fx:id="deleteLogConfirmLabel" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DeleteLogConfirmController">
+   <children>
+      <Label fx:id="confirmDeleteLogLabel" layoutX="34.0" layoutY="59.0" prefHeight="20.0" prefWidth="70.0" />
+      <Button fx:id="confirmDeleteLogButton" layoutX="55.0" layoutY="132.0" mnemonicParsing="false" text="确认" />
+      <Button fx:id="cancelDeleteLogButton" layoutX="174.0" layoutY="132.0" mnemonicParsing="false" text="取消" />
+   </children>
+</AnchorPane>
